@@ -55,7 +55,7 @@ class LibraryManager:
                 self._save_data()
                 print(f"📖 You have successfully borrowed '{book['title']}'.")
                 return
-        print("❌ Error: Book with that ISBN not found.")
+        print("❌ Error: Book with that Id not found.")
 
     def return_book(self, id: int):
         for book in self.books:
@@ -67,4 +67,4 @@ class LibraryManager:
                 self._save_data()
                 print(f"↩️ You have successfully returned '{book['title']}'.")
                 return
-        print("❌ Error: Book with that ISBN not found.")
+        print("❌ Error: Book with that Id not found.")
