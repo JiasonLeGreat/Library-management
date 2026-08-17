@@ -9,7 +9,7 @@ def main():
         if count == 0:        
          print("\nWelcome to the Library Management System")
          menu()
-         count =+ 1
+         count += 1
         else:
          menu()
 
