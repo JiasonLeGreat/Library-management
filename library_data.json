@@ -2,13 +2,19 @@
     {
         "title": "Howl's Moving Castle",
         "author": "Diana Wynne Jones",
-        "id": "1233658965",
+        "id": 1233658965,
         "is_borrowed": false
     },
     {
         "title": "White Fang",
         "author": "Jack London",
-        "id": "1324558966",
+        "id": 1324558966,
+        "is_borrowed": false
+    },
+    {
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "id": 1674578966,
         "is_borrowed": false
     }
 ]
