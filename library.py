@@ -20,7 +20,7 @@ class LibraryManager():
         with open(self.filename, 'w', encoding='utf-8') as file:
             json.dump(self.books, file, indent=4)
 
-    def add_book(self, author: str, title: str, book_id: str, is_borrowed: Boolean):
+    def add_book(self, author: str, title: str, book_id: int, is_borrowed: Boolean):
         if any(book['id'] == book_id for book in self.books):
             print(f"❌ Error: A book with id {id} already exists.")
             return False
@@ -41,7 +41,7 @@ class LibraryManager():
             status = "Borrowed" if book['is_borrowed'] else "Available"
             print(f"{i}. Title: {book['title']} | Author: {book['author']} | Id: {book['id']} | Status: [{status}]")
 
-    def borrow_book(self, id: str):
+    def borrow_book(self, id: int):
         for book in self.books:
             if book['id'] == id:
                 if book['is_borrowed']:
@@ -53,7 +53,7 @@ class LibraryManager():
                 return
         print("❌ Error: Book with that Id not found.")
 
-    def return_book(self, id: str):
+    def return_book(self, id: int):
         for book in self.books:
             if book['id'] == id:
                 if not book['is_borrowed']:
