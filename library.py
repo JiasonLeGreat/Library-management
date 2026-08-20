@@ -20,7 +20,7 @@ class LibraryManager():
         with open(self.filename, 'w', encoding='utf-8') as file:
             json.dump(self.books, file, indent=4)
 
-    def add_book(self, author: str, title: str, book_id: int, is_borrowed: Boolean):
+    def add_book(self, author: str, title: str, book_id: int, is_borrowed: bool):
         if any(book['id'] == book_id for book in self.books):
             print(f"❌ Error: A book with id {id} already exists.")
             return False
